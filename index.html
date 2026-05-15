@@ -52,6 +52,18 @@
         
         .gold-text { color: #d97706; } /* Darker gold for visibility on white */
         .dark-mode .gold-text { color: #fbbf24; }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(156, 163, 175, 0.2);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .light-mode .stat-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
     </style>
 </head>
 <body class="dark-mode" id="mainBody">
@@ -73,7 +85,7 @@
             <h2 class="heading-bold text-2xl md:text-4xl mb-8">Who is <span class="gold-text">Fuchaweb3?</span></h2>
             
             <div class="space-y-6 text-lg leading-relaxed">
-                <p class="text-main">Fuchaweb3 is the premier Web3 educational community focused on the Hausa-speaking population globally.</p>
+                <p class="text-main font-medium">Fuchaweb3 is the premier Web3 educational community focused on the Hausa-speaking population globally.</p>
                 
                 <div class="about-box">
                     <h3 class="heading-bold text-sm text-blue-500 mb-2">Our Mission</h3>
@@ -84,6 +96,24 @@
                     <h3 class="heading-bold text-sm text-blue-500 mb-2">Our Vision</h3>
                     <p class="text-main">To empower every Hausa speaker with the knowledge to participate and thrive in the decentralized economy of the future.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="stat-card">
+                <i class="fas fa-users text-2xl gold-text mb-3"></i>
+                <p class="heading-bold text-2xl">15.8K+</p>
+                <p class="text-[10px] uppercase tracking-widest opacity-60">X Followers</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-handshake text-2xl text-blue-500 mb-3"></i>
+                <p class="heading-bold text-2xl">Aptos</p>
+                <p class="text-[10px] uppercase tracking-widest opacity-60">Official Partner</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-chart-line text-2xl gold-text mb-3"></i>
+                <p class="heading-bold text-2xl">Insight</p>
+                <p class="text-[10px] uppercase tracking-widest opacity-60">High Engagement</p>
             </div>
         </section>
 
