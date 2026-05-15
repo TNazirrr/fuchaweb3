@@ -3,119 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuchaweb3 | Web3 & Crypto Hub</title>
+    <title>Fuchaweb3 | The Future of Web3 in Hausa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Outfit:wght@300;500;800&display=swap');
         
-        body { font-family: 'Space Grotesk', sans-serif; transition: background 0.5s, color 0.5s; }
+        :root { --gold: #FFD700; --dark: #000000; }
         
-        /* Dark Theme Styles - Fully Web3 Aesthetic */
-        .dark-theme { background: #020617; color: #ffffff; }
-        .dark-theme .stat-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
-        .dark-theme .secondary-text { color: rgba(148, 163, 184, 1); }
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background-color: var(--dark); 
+            color: white;
+            overflow-x: hidden;
+        }
 
-        /* Light Theme Styles */
-        .light-theme { background: #f8fafc; color: #0f172a; }
-        .light-theme .stat-card { background: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .light-theme .secondary-text { color: #64748b; }
+        .heading-font { font-family: 'Syncopate', sans-serif; }
 
-        .hero-glow { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 600px; background: radial-gradient(circle, rgba(234, 179, 8, 0.1) 0%, transparent 70%); z-index: -1; }
-        
-        /* Fucha Brand Colors */
-        .fucha-gradient { background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%); color: #000 !important; }
-        .fucha-text { color: #eab308; }
-        .fucha-border { border: 2.5px solid #eab308; }
-        
-        .premium-btn { border-radius: 14px; transition: 0.3s; font-weight: 800; display: inline-flex; align-items: center; gap: 8px; }
-        .premium-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(234, 179, 8, 0.3); }
-        
-        .web3-tag { border: 1px solid #eab308; color: #eab308; background: rgba(234, 179, 8, 0.1); padding: 6px 20px; border-radius: 50px; font-weight: 800; font-size: 11px; letter-spacing: 2px; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            transition: 0.4s;
+        }
+
+        .glass-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #FFD700, #B8860B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .gold-btn {
+            background: linear-gradient(45deg, #FFD700, #B8860B);
+            color: black;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .gold-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .neon-border {
+            border-bottom: 2px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+        }
+
+        /* Animation for the glow */
+        .glow-sphere {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(50px);
+        }
     </style>
 </head>
-<body class="dark-theme" id="theme-body">
+<body>
 
-    <div class="hero-glow"></div>
+    <div class="glow-sphere" style="top: -100px; right: -100px;"></div>
+    <div class="glow-sphere" style="bottom: -100px; left: -100px;"></div>
 
-    <nav class="sticky top-0 z-50 px-6 py-4 backdrop-blur-xl border-b border-white/5">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-[#eab308] rounded-xl flex items-center justify-center font-black text-black">F</div>
-                <span class="font-bold text-sm tracking-widest uppercase">Fuchaweb3</span>
-            </div>
-            <button onclick="toggleTheme()" class="w-12 h-12 rounded-2xl border border-gray-500/30 flex items-center justify-center hover:bg-gray-500/10 transition" id="theme-btn">
-                <i class="fas fa-moon text-xl" id="theme-icon"></i>
-            </button>
-        </div>
+    <nav class="p-6 flex justify-center">
+        <div class="heading-font text-xl tracking-[0.3em] gold-text">FUCHA WEB3</div>
     </nav>
 
-    <header class="pt-20 pb-12 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <div class="inline-block web3-tag mb-10 uppercase">
-                Bridging Web3 Language Barrier
-            </div>
+    <header class="pt-12 pb-20 px-6 text-center max-w-5xl mx-auto">
+        <div class="mb-8 flex justify-center">
+            <img src="https://unavatar.io/twitter/fuchaweb3" alt="Logo" class="w-32 h-32 rounded-full border-4 border-[#FFD700] shadow-[0_0_30px_rgba(255,215,0,0.3)]">
+        </div>
+        
+        <h1 class="heading-font text-4xl md:text-6xl mb-6 leading-tight">
+            DECODING THE <span class="gold-text">FUTURE</span> <br> IN HAUSA
+        </h1>
+        
+        <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+            Leading the charge in crypto adoption across the Hausa community by bridging the language gap in the decentralized world.
+        </p>
 
-            <div class="relative w-48 h-48 mx-auto mb-10">
-                <img src="https://unavatar.io/twitter/fuchaweb3" alt="Fuchaweb3" class="w-full h-full rounded-3xl object-cover fucha-border shadow-[0_0_40px_rgba(234,179,8,0.2)]">
-            </div>
-
-            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter italic uppercase">
-                Fucha <span class="fucha-text">Web3</span>
-            </h1>
-            
-            <p class="text-lg md:text-2xl font-medium opacity-80 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Pushing crypto adoption to <span class="text-white font-bold underline decoration-[#eab308]">Hausa Community</span>. Building the future of finance on the Aptos Blockchain.
-            </p>
-
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="https://t.me/fuchaweb3" class="fucha-gradient premium-btn px-10 py-4 shadow-xl">
-                    <i class="fab fa-telegram-plane"></i> JOIN COMMUNITY
-                </a>
-                <a href="https://x.com/fuchaweb3" class="border-2 border-gray-500/30 px-10 py-4 rounded-2xl font-bold hover:bg-gray-500/10 transition">
-                    FOLLOW ON X
-                </a>
-            </div>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://t.me/fuchaweb3" class="gold-btn px-10 py-4 rounded-full flex items-center gap-2">
+                <i class="fab fa-telegram"></i> Join Telegram
+            </a>
+            <a href="https://x.com/fuchaweb3" class="border border-white/20 px-10 py-4 rounded-full font-bold hover:bg-white/5 transition">
+                X Profile
+            </a>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="stat-card p-10 rounded-[32px] text-center">
-                <p class="text-5xl font-black fucha-text mb-3">15.8K</p>
-                <p class="text-xs uppercase tracking-[0.2em] secondary-text font-bold">X Followers</p>
+    <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
+        <div class="glass-card p-10">
+            <h3 class="heading-font text-[#FFD700] text-sm mb-4 tracking-widest uppercase">Our Mission</h3>
+            <p class="text-gray-300 leading-relaxed italic">
+                "To push crypto adoption to the Hausa community by bridging the Web3 language barrier through education, news, and real-time market updates."
+            </p>
+        </div>
+        <div class="glass-card p-10">
+            <h3 class="heading-font text-[#FFD700] text-sm mb-4 tracking-widest uppercase">Our Vision</h3>
+            <p class="text-gray-300 leading-relaxed italic">
+                "To build the future of finance on blockchains like Aptos, ensuring every Hausa speaker has the tools to thrive in the decentralized economy."
+            </p>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center p-6 border-l border-white/10">
+                <div class="heading-font text-2xl gold-text">15.8K</div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Followers</div>
             </div>
-            <div class="stat-card p-10 rounded-[32px] text-center fucha-border">
-                <p class="text-5xl font-black mb-3">Web3</p>
-                <p class="text-xs uppercase tracking-[0.2em] secondary-text font-bold">Language Hub</p>
+            <div class="text-center p-6 border-l border-white/10">
+                <div class="heading-font text-2xl">Aptos</div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Blockchain</div>
             </div>
-            <div class="stat-card p-10 rounded-[32px] text-center">
-                <p class="text-5xl font-black text-white mb-3">Aptos</p>
-                <p class="text-xs uppercase tracking-[0.2em] secondary-text font-bold">Main Partner</p>
+            <div class="text-center p-6 border-l border-white/10">
+                <div class="heading-font text-2xl gold-text">Web3</div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Education</div>
+            </div>
+            <div class="text-center p-6 border-l border-white/10">
+                <div class="heading-font text-2xl">Hausa</div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Language</div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center">
-        <p class="text-[10px] tracking-[0.8em] opacity-30 uppercase font-black">Crypto Awareness • Hausa Language Hub</p>
+    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <div class="glass-card p-12 relative overflow-hidden">
+            <h2 class="heading-font text-2xl mb-4">HAVE A REPORT?</h2>
+            <p class="text-gray-400 mb-8">For any reports or inquiries, reach out to our team directly.</p>
+            
+            <a href="mailto:fuchaweb3@gmail.com?subject=Report/Inquiry&body=Write your message here..." class="gold-btn px-12 py-5 rounded-2xl inline-block shadow-lg">
+                SEND MAIL <i class="fas fa-paper-plane ml-2"></i>
+            </a>
+            <p class="mt-4 text-[11px] text-gray-600 tracking-tighter">fuchaweb3@gmail.com</p>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center opacity-30 text-[10px] tracking-[0.5em] uppercase">
+        &copy; 2026 Fuchaweb3 • Decentralizing Knowledge
     </footer>
 
-    <script>
-        function toggleTheme() {
-            const body = document.getElementById('theme-body');
-            const icon = document.getElementById('theme-icon');
-            
-            if (body.classList.contains('dark-theme')) {
-                body.classList.replace('dark-theme', 'light-theme');
-                icon.classList.replace('fa-moon', 'fa-sun');
-                icon.style.color = '#eab308';
-            } else {
-                body.classList.replace('light-theme', 'dark-theme');
-                icon.classList.replace('fa-sun', 'fa-moon');
-                icon.style.color = 'inherit';
-            }
-        }
-    </script>
 </body>
-  </html>
-
+</html>
