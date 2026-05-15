@@ -3,130 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Fuchaweb3 | Web3 Education Hub</title>
+    <title>About Fuchaweb3 | Web3 Authority</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Fonts masu kwarjini da daukar hankali */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@400;500;700&display=swap');
         
-        :root { --fucha-gold: #FFD700; --fucha-black: #000000; }
+        :root { 
+            --gold: #FFC107; 
+            --accent: #3b82f6;
+        }
         
         body { 
             font-family: 'Inter', sans-serif; 
-            background-color: var(--fucha-black); 
-            color: #e5e7eb;
-            line-height: 1.6;
+            transition: all 0.4s ease;
         }
 
-        .heading-bold { 
-            font-family: 'Montserrat', sans-serif; 
-            text-transform: uppercase;
-            letter-spacing: -1px;
+        .dark-mode { background-color: #020617; color: #f1f5f9; }
+        .light-mode { background-color: #ffffff; color: #0f172a; }
+
+        .heading-bold { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+
+        /* Rounded Rectangle Buttons */
+        .btn-round {
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
         }
 
-        .about-section {
-            border-left: 3px solid var(--fucha-gold);
-            padding-left: 24px;
-            margin-bottom: 40px;
+        .x-btn { background-color: #000000; color: white; border: 1px solid #333; }
+        .tg-btn { background-color: #0088cc; color: white; }
+        .theme-btn { border: 2px solid var(--gold); color: var(--gold); }
+
+        /* Catchy Color Section */
+        .about-box {
+            border-left: 5px solid var(--gold);
+            padding: 20px;
+            background: rgba(255, 193, 7, 0.05);
+            border-radius: 0 15px 15px 0;
         }
 
-        .gold-glow-text {
-            color: var(--fucha-gold);
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-        }
-
-        .btn-action {
-            background-color: var(--fucha-gold);
-            color: black;
-            font-weight: 800;
-            padding: 16px 40px;
-            border-radius: 8px;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .btn-action:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
-        }
-
-        .profile-img-header {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid var(--fucha-gold);
-            padding: 5px;
-            background: black;
-        }
+        .dark-mode .text-main { color: #f8fafc; }
+        .light-mode .text-main { color: #1e293b; }
+        
+        .gold-text { color: #d97706; } /* Darker gold for visibility on white */
+        .dark-mode .gold-text { color: #fbbf24; }
     </style>
 </head>
-<body>
+<body class="dark-mode" id="mainBody">
 
-    <header class="py-12 flex flex-col items-center border-b border-white/5 bg-gradient-to-b from-white/5 to-transparent">
-        <img src="https://unavatar.io/twitter/fuchaweb3" alt="Fuchaweb3" class="profile-img-header mb-4 shadow-2xl">
-        <h1 class="heading-bold text-2xl md:text-3xl gold-glow-text">FUCHAWEB3</h1>
-        <p class="text-[10px] tracking-[0.6em] opacity-50 font-bold mt-2">DECENTRALIZING KNOWLEDGE</p>
+    <header class="py-10 flex flex-col items-center text-center">
+        <div class="relative mb-4">
+            <img src="https://unavatar.io/twitter/fuchaweb3" alt="Logo" class="w-28 h-28 rounded-full border-4 border-[#FFC107] shadow-xl">
+        </div>
+        <h1 class="heading-bold text-3xl gold-text">FUCHA WEB3</h1>
+        
+        <button onclick="toggleTheme()" class="btn-round theme-btn mt-6 text-xs">
+            <i class="fas fa-adjust"></i> SWITCH MODE
+        </button>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-20">
+    <main class="max-w-4xl mx-auto px-6 py-10">
         
-        <section class="mb-24">
-            <h2 class="heading-bold text-3xl md:text-5xl mb-10 text-white">Who is <span class="text-[#FFD700]">Fuchaweb3?</span></h2>
-            <div class="space-y-8 text-lg md:text-xl text-gray-300 font-light">
-                <p>
-                    Fuchaweb3 is the leading decentralized education platform dedicated to the Hausa-speaking community. We believe that technology and finance should not have a language barrier. 
-                </p>
+        <section class="mb-16">
+            <h2 class="heading-bold text-2xl md:text-4xl mb-8">Who is <span class="gold-text">Fuchaweb3?</span></h2>
+            
+            <div class="space-y-6 text-lg leading-relaxed">
+                <p class="text-main">Fuchaweb3 is the premier Web3 educational community focused on the Hausa-speaking population globally.</p>
                 
-                <div class="about-section">
-                    <h3 class="heading-bold text-lg text-[#FFD700] mb-3">Our Mission</h3>
-                    <p>To accelerate Web3 and Crypto adoption across Northern Nigeria and the Sahel by providing verified, high-quality information in a language our people understand best.</p>
+                <div class="about-box">
+                    <h3 class="heading-bold text-sm text-blue-500 mb-2">Our Mission</h3>
+                    <p class="text-main">To break the language barrier in the blockchain ecosystem by providing real-time news, deep-dive education, and market insights in Hausa.</p>
                 </div>
 
-                <div class="about-section">
-                    <h3 class="heading-bold text-lg text-[#FFD700] mb-3">Our Vision</h3>
-                    <p>To create a future where every Hausa speaker, regardless of their location, has equal access to the opportunities within the global digital economy and blockchain ecosystem.</p>
+                <div class="about-box">
+                    <h3 class="heading-bold text-sm text-blue-500 mb-2">Our Vision</h3>
+                    <p class="text-main">To empower every Hausa speaker with the knowledge to participate and thrive in the decentralized economy of the future.</p>
                 </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24 py-10 border-y border-white/5">
-            <div class="text-center">
-                <p class="heading-bold text-3xl text-white">15.8K</p>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500">X Community</p>
-            </div>
-            <div class="text-center">
-                <p class="heading-bold text-3xl text-white">Web3</p>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500">Focus</p>
-            </div>
-            <div class="text-center">
-                <p class="heading-bold text-3xl text-white">Hausa</p>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500">Language</p>
-            </div>
-            <div class="text-center">
-                <p class="heading-bold text-3xl text-white">24/7</p>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500">Updates</p>
-            </div>
-        </section>
-
-        <section class="text-center bg-[#111] p-12 rounded-3xl border border-white/5">
-            <h2 class="heading-bold text-2xl mb-6">Need Support?</h2>
-            <p class="text-gray-400 mb-10">Send us an email for inquiries, partnerships, or reports.</p>
-            
-            <a href="mailto:fuchaweb3@gmail.com?subject=Inquiry&body=Hello Fuchaweb3 Team," class="btn-action inline-block mb-4">
-                SEND EMAIL <i class="fas fa-paper-plane ml-2"></i>
+        <div class="flex flex-wrap gap-4 justify-center mb-20">
+            <a href="https://x.com/fuchaweb3" class="btn-round x-btn shadow-lg">
+                <i class="fab fa-x-twitter"></i> Twitter Account
             </a>
+            <a href="https://t.me/fuchaweb3" class="btn-round tg-btn shadow-lg">
+                <i class="fab fa-telegram"></i> Telegram Group
+            </a>
+        </div>
+
+        <section class="p-8 rounded-3xl border-2 border-dashed border-gray-500/30 text-center">
+            <h3 class="heading-bold mb-4">Have a Report?</h3>
+            <p class="mb-8 opacity-70">For partnership or reporting, reach out via official mail.</p>
             
-            <div class="flex justify-center gap-6 mt-8">
-                <a href="https://t.me/fuchaweb3" class="text-gray-500 hover:text-[#FFD700] transition text-xl"><i class="fab fa-telegram"></i></a>
-                <a href="https://x.com/fuchaweb3" class="text-gray-500 hover:text-[#FFD700] transition text-xl"><i class="fab fa-x-twitter"></i></a>
-            </div>
+            <a href="mailto:fuchaweb3@gmail.com" class="btn-round bg-[#FFC107] text-black w-full md:w-auto justify-center">
+                SEND MAIL <i class="fas fa-paper-plane"></i>
+            </a>
         </section>
 
     </main>
 
-    <footer class="py-12 text-center border-t border-white/5 opacity-30">
-        <p class="text-[9px] tracking-[0.4em] uppercase font-bold">&copy; 2026 Fuchaweb3 Portfolio • Web3 Builders Class</p>
+    <footer class="py-10 text-center opacity-40 text-[10px] tracking-widest">
+        &copy; 2026 FUCHAWEB3 | WEB3 BUILDERS ASSIGNMENT
     </footer>
 
+    <script>
+        function toggleTheme() {
+            const body = document.getElementById('mainBody');
+            if (body.classList.contains('dark-mode')) {
+                body.classList.replace('dark-mode', 'light-mode');
+            } else {
+                body.classList.replace('light-mode', 'dark-mode');
+            }
+        }
+    </script>
 </body>
 </html>
