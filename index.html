@@ -3,156 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuchaweb3 | The Future of Web3 in Hausa</title>
+    <title>Fuchaweb3 | Web3 Hausa Authority</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Outfit:wght@300;500;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Outfit:wght@300;400;600;800&display=swap');
         
-        :root { --gold: #FFD700; --dark: #000000; }
+        :root { --fucha-gold: #FFD700; --fucha-black: #000000; }
         
         body { 
             font-family: 'Outfit', sans-serif; 
-            background-color: var(--dark); 
+            background-color: var(--fucha-black); 
             color: white;
-            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         .heading-font { font-family: 'Syncopate', sans-serif; }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
+        /* Glassmorphism Effect */
+        .fucha-card {
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 215, 0, 0.1);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            transition: 0.4s;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            transition: all 0.4s ease;
         }
 
-        .glass-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+        .fucha-card:hover {
+            border-color: var(--fucha-gold);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.05);
         }
 
-        .gold-text {
-            background: linear-gradient(to right, #FFD700, #B8860B);
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 800;
         }
 
-        .gold-btn {
-            background: linear-gradient(45deg, #FFD700, #B8860B);
+        .action-btn {
+            background: linear-gradient(45deg, #FFD700, #DAA520);
             color: black;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
             transition: 0.3s;
-        }
-
-        .gold-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-        }
-
-        .neon-border {
-            border-bottom: 2px solid var(--gold);
             box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
         }
 
-        /* Animation for the glow */
-        .glow-sphere {
+        .action-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Ambient Glow */
+        .bg-glow {
             position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
             z-index: -1;
-            filter: blur(50px);
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="glow-sphere" style="top: -100px; right: -100px;"></div>
-    <div class="glow-sphere" style="bottom: -100px; left: -100px;"></div>
+    <div class="bg-glow" style="top: -10%; right: -5%;"></div>
+    <div class="bg-glow" style="bottom: 10%; left: -5%;"></div>
 
-    <nav class="p-6 flex justify-center">
-        <div class="heading-font text-xl tracking-[0.3em] gold-text">FUCHA WEB3</div>
+    <nav class="sticky top-0 z-50 p-6 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://unavatar.io/twitter/fuchaweb3" alt="Fuchaweb3 Logo" class="w-10 h-10 rounded-lg border border-[#FFD700]">
+                <span class="heading-font text-xs md:text-sm tracking-[0.2em] gold-gradient-text">FUCHAWEB3</span>
+            </div>
+            <a href="https://fuchaweb3.com" class="text-[10px] font-bold border border-white/20 px-4 py-2 rounded-full hover:bg-white/5">WEBSITE</a>
+        </div>
     </nav>
 
-    <header class="pt-12 pb-20 px-6 text-center max-w-5xl mx-auto">
-        <div class="mb-8 flex justify-center">
-            <img src="https://unavatar.io/twitter/fuchaweb3" alt="Logo" class="w-32 h-32 rounded-full border-4 border-[#FFD700] shadow-[0_0_30px_rgba(255,215,0,0.3)]">
+    <header class="pt-20 pb-24 px-6 text-center max-w-4xl mx-auto">
+        <div class="inline-block px-4 py-1 border border-[#FFD700]/30 rounded-full text-[10px] font-bold tracking-widest text-[#FFD700] mb-8 uppercase">
+            #1 Web3 Community in Hausa
         </div>
         
-        <h1 class="heading-font text-4xl md:text-6xl mb-6 leading-tight">
-            DECODING THE <span class="gold-text">FUTURE</span> <br> IN HAUSA
+        <h1 class="heading-font text-3xl md:text-6xl mb-8 leading-[1.2]">
+            EMPOWERING THE <br> <span class="gold-gradient-text italic">HAUSA GENERATION</span>
         </h1>
         
-        <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-gray-400 text-lg md:text-xl mb-12 leading-relaxed">
             Leading the charge in crypto adoption across the Hausa community by bridging the language gap in the decentralized world.
         </p>
 
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://t.me/fuchaweb3" class="gold-btn px-10 py-4 rounded-full flex items-center gap-2">
-                <i class="fab fa-telegram"></i> Join Telegram
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+            <a href="https://t.me/fuchaweb3" class="action-btn px-12 py-5 rounded-xl flex items-center justify-center gap-3">
+                <i class="fab fa-telegram text-xl"></i> JOIN COMMUNITY
             </a>
-            <a href="https://x.com/fuchaweb3" class="border border-white/20 px-10 py-4 rounded-full font-bold hover:bg-white/5 transition">
-                X Profile
+            <a href="https://x.com/fuchaweb3" class="bg-white/5 border border-white/10 px-12 py-5 rounded-xl font-bold hover:bg-white/10 transition flex items-center justify-center">
+                EXPLORE X PROFILE
             </a>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
-        <div class="glass-card p-10">
-            <h3 class="heading-font text-[#FFD700] text-sm mb-4 tracking-widest uppercase">Our Mission</h3>
-            <p class="text-gray-300 leading-relaxed italic">
-                "To push crypto adoption to the Hausa community by bridging the Web3 language barrier through education, news, and real-time market updates."
-            </p>
-        </div>
-        <div class="glass-card p-10">
-            <h3 class="heading-font text-[#FFD700] text-sm mb-4 tracking-widest uppercase">Our Vision</h3>
-            <p class="text-gray-300 leading-relaxed italic">
-                "To build the future of finance on blockchains like Aptos, ensuring every Hausa speaker has the tools to thrive in the decentralized economy."
-            </p>
-        </div>
-    </section>
-
-    <section class="max-w-6xl mx-auto px-6 py-10">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="text-center p-6 border-l border-white/10">
-                <div class="heading-font text-2xl gold-text">15.8K</div>
-                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Followers</div>
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="fucha-card p-12">
+                <div class="w-12 h-12 bg-[#FFD700]/10 rounded-lg flex items-center justify-center mb-6 text-[#FFD700]">
+                    <i class="fas fa-bullseye text-2xl"></i>
+                </div>
+                <h3 class="heading-font text-lg mb-6 text-[#FFD700]">OUR MISSION</h3>
+                <p class="text-gray-300 text-lg leading-relaxed font-light">
+                    To push crypto adoption to the Hausa community by bridging the Web3 language barrier through high-quality education, verified news, and real-time market insights tailored for the grassroots.
+                </p>
             </div>
-            <div class="text-center p-6 border-l border-white/10">
-                <div class="heading-font text-2xl">Aptos</div>
-                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Blockchain</div>
-            </div>
-            <div class="text-center p-6 border-l border-white/10">
-                <div class="heading-font text-2xl gold-text">Web3</div>
-                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Education</div>
-            </div>
-            <div class="text-center p-6 border-l border-white/10">
-                <div class="heading-font text-2xl">Hausa</div>
-                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Language</div>
+            <div class="fucha-card p-12">
+                <div class="w-12 h-12 bg-[#FFD700]/10 rounded-lg flex items-center justify-center mb-6 text-[#FFD700]">
+                    <i class="fas fa-eye text-2xl"></i>
+                </div>
+                <h3 class="heading-font text-lg mb-6 text-[#FFD700]">OUR VISION</h3>
+                <p class="text-gray-300 text-lg leading-relaxed font-light">
+                    To become the global cornerstone of Web3 education for Hausa speakers, building a future where decentralized finance is accessible, understandable, and beneficial for everyone.
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <div class="glass-card p-12 relative overflow-hidden">
-            <h2 class="heading-font text-2xl mb-4">HAVE A REPORT?</h2>
-            <p class="text-gray-400 mb-8">For any reports or inquiries, reach out to our team directly.</p>
+    <section class="max-w-4xl mx-auto px-6 py-24 text-center">
+        <div class="fucha-card p-12 border-[#FFD700]/20 bg-gradient-to-b from-white/[0.03] to-transparent">
+            <h2 class="heading-font text-2xl mb-6">SUPPORT & REPORTS</h2>
+            <p class="text-gray-400 mb-10 max-w-md mx-auto">
+                Do you have a report, partnership inquiry, or need help? Send us a message directly to our official desk.
+            </p>
             
-            <a href="mailto:fuchaweb3@gmail.com?subject=Report/Inquiry&body=Write your message here..." class="gold-btn px-12 py-5 rounded-2xl inline-block shadow-lg">
-                SEND MAIL <i class="fas fa-paper-plane ml-2"></i>
+            <a href="mailto:fuchaweb3@gmail.com?subject=Report/Inquiry&body=Assalamu Alaikum Fuchaweb3 Team,%0D%0A%0D%0AI would like to report/inquire about..." 
+               class="action-btn px-16 py-6 rounded-2xl inline-flex items-center gap-3">
+                SEND MAIL <i class="fas fa-envelope-open-text"></i>
             </a>
-            <p class="mt-4 text-[11px] text-gray-600 tracking-tighter">fuchaweb3@gmail.com</p>
+            
+            <div class="mt-8 pt-8 border-t border-white/5">
+                <span class="text-xs text-gray-500 tracking-widest font-bold">FUCHAWEB3@GMAIL.COM</span>
+            </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center opacity-30 text-[10px] tracking-[0.5em] uppercase">
-        &copy; 2026 Fuchaweb3 • Decentralizing Knowledge
+    <footer class="py-12 text-center opacity-40">
+        <p class="text-[9px] tracking-[0.6em] uppercase font-bold">
+            &copy; 2026 Fuchaweb3 • Building on Aptos • Decentralizing Knowledge
+        </p>
     </footer>
 
 </body>
